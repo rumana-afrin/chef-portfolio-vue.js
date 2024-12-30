@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+:root {
+    --primary-green: rgb(65, 161, 1);
+    --primary-green-opacity: rgba(57, 139, 2, 0.603);
+    --secondary-dark-green: rgb(53, 129, 3);
+    --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    --white: rgb(250, 247, 247);
+}
+
+.social-link {
+    margin: 0;
+    padding: 5px !important;
+    color: var(--primary-green);
+    font-size: 20px;
+}
+
+.default-btn {
+    background-color: var(--secondary-dark-green);
+}
+
+.default-btn a {
+    color: var(--white);
+}
+
+.default-btn:hover {
+    background-color: var(--primary-green);
+    font-size: 15px;
+}
+
+
+
+/* ............................................end default style--------------------------- */
+@media (min-width: 992px) {
+    .nav-menu {
+        width: 100%;
+        padding-right: 18px !important;
+        padding-left: 0px !important;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-menu {
+        padding-right: 18px !important;
+        padding-left: 8px !important;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .topnav {
+        padding-left: 15px !important;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    .topnav {
+        padding-left: 40px !important;
+
+    }
+}
+
+.primary-nav {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 5px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.person_name {
+    font-size: 0.5rem;
+    margin-bottom: 0;
+    font-family: "Edu TAS Beginner", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.stop_nav {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+
+@media (max-width: 1024px) {
+    .main-right-nav {
+        margin-left: 0px !important;
+    }
+
+}
+
+.greenLine {
+    position: relative;
+}
+
+.greenLine::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-green);
+}
+
+.greenLine:hover::after {
+    width: 100%;
+    transition: .4s;
+}
+
+.greenLine:hover,
+.dropdown-toggle:hover {
+    color: var(--primary-green);
+}
+
+.navbar-toggler {
+    color: var(--primary-green) !important;
+}
+
+.recipes {
+    min-width: 15rem;
+    margin-top: 24px !important;
+    padding: 5px;
+    font-size: 14px;
+}
+
+@media screen and (min-width:992px) {
+    .menue-item {
+        min-width: 500px;
+        margin-top: 24px !important;
+
+    }
+
+    .menue-one {
+        border-left: 1px solid var(--primary-green);
+    }
+}
+
+.page {
+    position: relative;
+}
+
+.page-linking {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    /* Make the linking element invisible but still clickable */
+    z-index: 1;
+}
+
+.page:hover {
+    background-color: var(--primary-green);
+}
+
+.page:hover a {
+    color: var(--white);
+
+}
+
+
+/* .....................................start header section----------------- */
+.header {
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(@/assets/image/banner-6.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner {
+    max-width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.banner-about,
+.banner-experiance {
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+
+    background: #373a3756;
+    text-align: center;
+    color: #FFF;
+    padding: 10px;
+}
+
+.banner-text {
+    font-size: 40px;
+}
+@media screen and (max-width:560px){
+    .banner-text{
+        font-size: 25px;
+    }
+}
+
+/* ----------------------------------start carousel ----------------------- */
+.carousel-head {
+    max-width: 500px;
+    /* Maximum width */
+    height: 50px;
+    display: flex;
+    /* To center the image inside */
+    align-items: center;
+    /* To center the image inside */
+    justify-content: center;
+    /* To center the image inside */
+    margin: auto;
+    /* Center the items horizontally */
+
+}
+
+@media (max-width: 425px) {
+    .carousel-head {
+        max-width: 200px;
+        /* Maximum width */
+
+
+    }
+}
+
+.carousel-head img {
+    max-width: 100%;
+    height: auto;
+}
+
+.fa-carrot,
+.fa-face-smile {
+    font-size: 30px;
+    margin: 10px;
+    color: var(--primary-green);
+}
+
+.carousel .container {
+    max-width: 1200px;
+    /* Maximum width */
+    width: 100%;
+    /* Full width up to max-width */
+    margin: 0 auto;
+    /* Centering the container */
+}
+
+/*owl Carousel items */
+.item {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.owl-carousel .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-carousel .item img {
+    display: block;
+    margin: 0 auto;
+}
+
+.owl-carousel .item p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--secondary-dark-green);
+}
+
+/* ------------------------------------------------------start card section ----------------------------*/
+.menu-card,
+.recipe-card {
+    margin-top: 75px;
+}
+
+.menu-heading {
+    position: relative;
+    z-index: 1;
+}
+
+.section-heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 70px;
+}
+
+.section-heading h1 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 70px;
+}
+
+.menu-heading>a {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    border: none;
+    z-index: 9;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    height: 54px;
+    border: 1px solid #ffffff;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 0;
+    line-height: 40px;
+    color: #000;
+
+}
+
+.section_button:hover,
+.section_button:focus {
+    color: #028308;
+    font-weight: 500;
+}
+
+.section_button>span {
+    width: 8px;
+    height: 8px;
+    background-color: #028308;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card a {
+    color: var(--primary-green);
+}
+
+.card:hover {
+    box-shadow: rgba(40, 99, 1, 0.274) 0px 5px 15px;
+}
+
+@media (max-width: 768px) {
+    .card img {
+        height: auto;
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* start skill section */
+.contact-us,
+.skill {
+    margin-top: 106px;
+
+}
+
+.skill {
+    background-color: #eff1ee;
+}
+
+.skill-image {
+    max-width: 900px;
+    min-height: auto;
+    overflow: hidden;
+}
+
+.skill-image img {
+    max-width: 100%;
+    min-height: auto;
+    transition: transform 2s;
+
+}
+
+.skill-image:hover img {
+    transform: scale(1.2);
+
+}
+
+.skill-title {
+    color: var(--primary-green);
+}
+
+.fa-circle {
+    color: var(--primary-green);
+    font-size: 10px;
+    padding-right: 15px;
+}
+
+.chef-skills {
+    line-height: 2;
+    font-size: 19px;
+    padding-left: 0px !important;
+}
+
+@media (max-width:991px) {
+    .skill-content {
+        margin-top: 25px;
+    }
+}
+
+/* --------------------------------------start contact us----------------------  */
+.contact-icon {
+    font-size: 34px;
+    color: var(--primary-green);
+}
+
+.contact-item {
+    font-size: 25px;
+    color: var(--primary-green);
+}
+
+.contact-title h2 {
+    color: var(--primary-green);
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+/* --------form------ */
+.form-area {
+    position: relative;
+}
+
+.input-label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.input-area {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    border: 1px solid var(--primary-green);
+    border-radius: 10px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: 1px solid var(--primary-green);
+}
+
+@media (min-width: 425px) {
+    .contact-form {
+        margin-top: 20px;
+    }
+}
+
+/* --------------------------------footer---------------------- */
+.footer {
+    background-color: var(--secondary-dark-green);
+    padding: 25px;
+}
+
+.footer p {
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* -------------------------------------------------------end home page-------------------------------- */
+
+/* -------------------------------------------------------start recipes page-------------------------------- */
+
+/* start bootstrap carousel  */
+
+.carousel-item {
+    transition: opacity 3s ease !important;
+}
+
+/* .carousel-indicators{
+    z-index: 1 !important;
+
+} */
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background-color: #fff !important;
+    opacity: 1 !important;
+}
+
+.carousel-indicators .active {
+    background-color: rgb(77, 190, 11) !important;
+    opacity: 1;
+
+}
+
+.carousel-caption {
+    background-color: var(--primary-green-opacity);
+    border-radius: 5px;
+}
+
+
+/* end bootstrap carousel  */
+/* start recipe menu*/
+.pill-item {
+    background-color: var(--primary-green) !important;
+    color: var(--white);
+}
+
+.nav-pills {
+    --bs-nav-pills-link-active-bg: var(--primary-green);
+}
+
+.pill-item:hover {
+    background-color: var(--secondary-dark-green) !important;
+    color: var(--white);
+    font-size: 16.5px;
+}
+
+/*end recipe menu */
+
+/* start recipe card */
+.card-image {
+    position: relative;
+
+}
+
+.hover-content {
+    display: none;
+}
+
+.card-image:hover .hover-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+.recipe-info {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.card-image:hover .hover-content h5,
+.card-image:hover .hover-content button {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.card-image:hover .primary-btn {
+    border-radius: 0px;
+    background-color: var(--secondary-dark-green);
+}
+
+.primary-btn a {
+    color: var(--white);
+}
+
+.card-image:hover .hover-content h5,
+.primary-btn a {
+    padding: 5px;
+
+}
+
+/* end recipe card */
+.tab-banner {
+    overflow: hidden;
+}
+
+.tab-banner img {
+    animation: zoom 5s infinite alternate;
+    /* Apply the animation */
+    width: 100%;
+    height: auto;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+        /* Initial scale */
+    }
+
+    50% {
+        transform: scale(1.1);
+        /* Scale to 110% */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Scale back to 100% */
+    }
+}
+
+.nav-link[style] {
+    z-index: 1;
+}
+
+/* -------------------------------------start veg page---------------------------- */
+.vag_banner {
+    width: 100%;
+    height: 500px;
+}
+
+.veg-card {
+    margin-bottom: 25px;
+}
+
+.veg-card-img img {
+    transition: transform 2s;
+}
+
+.veg-card-img:hover img {
+    transform: scale(1.2);
+}
+
+/* ------------------------------------start single page---------------------- */
+.recipe-rate i {
+    color: #f8e008;
+}
+
+/* --------------------------------about page---------------- */
+
+.about-banner {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background: rgb(0, 101, 32);
+    background: linear-gradient(106deg, rgba(0, 101, 32, 1) 0%, rgba(164, 218, 10, 1) 100%);
+}
+
+.chefname h1,
+h6 {
+    color: #ffffff;
+}
+
+.innerdiv p,
+.outerdiv p {
+    font-size: 15px;
+}
+
+@media only screen and (min-width: 993px) {
+    .outerdiv {
+        display: none;
+    }
+
+    .innerdiv {
+        display: flex;
+        margin-top: 44px;
+    }
+
+    .banner-content {
+        position: absolute;
+        top: 253px;
+        left: 100px;
+        left: 76px;
+        width: 86%;
+        height: 56%;
+    }
+
+    .chef {
+        width: 200px;
+        height: 200px;
+        /* margin-left: 20px; */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .outerdiv {
+        display: none;
+    }
+
+    .innerdiv {
+        display: flex;
+        margin-top: 44px;
+    }
+
+    .banner-content {
+        position: absolute;
+        top: 253px;
+        left: 100px;
+        width: 86%;
+        height: 56%;
+
+
+
+    }
+
+    .chef {
+        margin-left: 115px;
+    }
+
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .about-banner {
+        display: none;
+    }
+
+    .banner-content {
+
+        left: 100px;
+        width: 97%;
+        height: 56%;
+
+    }
+
+    .chefimage {
+        overflow: hidden;
+        background: #a5a5a5;
+    }
+
+    .chefname {
+        background: #a5a5a5;
+    }
+
+    .chef {
+        width: 170px;
+        height: 170px;
+        margin-left: 30px;
+    }
+
+    .innerdiv {
+        display: none;
+    }
+
+    .outerdiv {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .about-banner {
+        display: none;
+    }
+
+    .banner-content {
+
+        width: 100%;
+        /* background-color: #f8e008; */
+
+    }
+
+    .chefimage {
+        overflow: hidden;
+        padding: 0px;
+        background: #a5a5a5;
+    }
+
+    .chefname {
+        background: #a5a5a5;
+    }
+
+    .chef {
+        width: 170px;
+        height: 170px;
+        margin-left: 0px;
+
+    }
+
+    .innerdiv {
+        display: none;
+    }
+
+    .outerdiv {
+        display: block;
+    }
+}
+.about-body{
+    margin-top: 144px;
+}
+@media only screen and (max-width:992px){
+    .about-body{
+        margin-top: 25px;
+    }
+}
+@media only screen and (max-width:767px){
+    .resume-leftside{
+        margin-left: 25px;
+    }
+    .resume-righttside{
+        margin-top: 25px;
+    }
+}
+@media only screen and (min-width:768px){
+    .resume-leftside{
+        margin-left: 25px;
+    }
+}
+@media only screen and (min-width:1200px){
+    .resume-leftside{
+        margin-left: 115px;
+    }
+}
