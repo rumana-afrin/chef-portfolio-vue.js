@@ -17,7 +17,7 @@ const app = createApp(App)
 
 // Register global directive
 app.directive('aos', directives.aos);
-app.directive('owl-carousel', directives.owlCarousel);
+// app.directive('owl-carousel', directives.owlCarousel);
 
 app.use(router)
 

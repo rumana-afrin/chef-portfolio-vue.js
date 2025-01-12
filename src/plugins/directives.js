@@ -29,40 +29,34 @@ export default {
     },
 
     // Global OwlCarousel directive
-    owlCarousel: {
-        mounted(el) {
-            nextTick(() => {
-                // Clean up if already initialized
-                if ($(el).hasClass('owl-loaded')) {
-                    $(el).trigger('destroy.owl.carousel');
-                }
-
-                // Initialize carousel with options
-                $(el).owlCarousel({
-                    loop: true,
-                    margin: 30,
-                    center: true,
-                    autoplay: true,
-                    dots: false,
-                    responsive: {
-                        0: { 
-                            items: 1
-                         }, // 1 item for very small devices
-                        600: {
-                             items: 2
-                            }, // 2 items for slightly larger devices
-                        1000: {
-                             items: 4 
-                            }, // 4 items for desktops
-                      },
-                });
-            });
-        },
-        unmounted(el) {
-            // Destroy carousel on unmount
-            if ($(el).hasClass('owl-loaded')) {
-                $(el).trigger('destroy.owl.carousel');
-            }
-        },
-    },
+    // owlCarousel: {
+    //     mounted(el) {
+    //       nextTick(() => {
+    //         // Destroy carousel if already initialized
+    //         if ($(el).hasClass('owl-loaded')) {
+    //           $(el).trigger('destroy.owl.carousel');
+    //         }
+    
+    //         // Initialize Owl Carousel
+    //         $(el).owlCarousel({
+    //           loop: true,
+    //           margin: 30,
+    //           center: true,
+    //           autoplay: true,
+    //           dots: false,
+    //           responsive: {
+    //             0: { items: 1 }, // 1 item for very small devices
+    //             600: { items: 2 }, // 2 items for slightly larger devices
+    //             1000: { items: 4 }, // 4 items for desktops
+    //           },
+    //         });
+    //       });
+    //     },
+    //     unmounted(el) {
+    //       // Destroy carousel on unmount
+    //       if ($(el).hasClass('owl-loaded')) {
+    //         $(el).trigger('destroy.owl.carousel');
+    //       }
+    //     },
+    //   },
 };

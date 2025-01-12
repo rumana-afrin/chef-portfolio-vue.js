@@ -188,13 +188,6 @@ li {
 
 
 /* .....................................start header section----------------- */
-.header {
-    max-width: 100%;
-    height: 100vh;
-    background-image: url(@/assets/image/banner-6.jpg);
-    background-position: center;
-    background-size: cover;
-}
 
 .banner {
     max-width: 100%;
@@ -212,11 +205,13 @@ li {
     overflow: hidden;
     max-width: 100%;
     height: auto;
-
     background: #373a3756;
-    text-align: center;
+    
     color: #FFF;
     padding: 10px;
+}
+.banner-about{
+    text-align: center;
 }
 
 .banner-text {
@@ -434,13 +429,14 @@ li {
 
 /* --------------------------------------start contact us----------------------  */
 .contact-icon {
-    font-size: 34px;
+    font-size: 30px;
     color: var(--primary-green);
 }
 
 .contact-item {
-    font-size: 25px;
+    font-size: 23px;
     color: var(--primary-green);
+   /* overflow: hidden; */
 }
 
 .contact-title h2 {
@@ -505,10 +501,9 @@ textarea:focus-visible {
     transition: opacity 3s ease !important;
 }
 
-/* .carousel-indicators{
-    z-index: 1 !important;
-
-} */
+.carousel-indicators{
+margin-bottom: 2em !important;
+}
 .carousel-indicators button {
     width: 12px !important;
     height: 12px !important;
@@ -605,8 +600,8 @@ textarea:focus-visible {
 .tab-banner img {
     animation: zoom 5s infinite alternate;
     /* Apply the animation */
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
 }
 
 @keyframes zoom {
@@ -633,19 +628,13 @@ textarea:focus-visible {
 /* -------------------------------------start veg page---------------------------- */
 .vag_banner {
     width: 100%;
-    height: 500px;
 }
-
-.veg-card {
-    margin-bottom: 25px;
-}
-
-.veg-card-img img {
+.veg-card{
     transition: transform 2s;
 }
 
-.veg-card-img:hover img {
-    transform: scale(1.2);
+.veg-card:hover{
+    transform: scale(1.1);
 }
 
 /* ------------------------------------start single page---------------------- */

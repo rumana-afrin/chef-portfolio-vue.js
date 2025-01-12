@@ -43,25 +43,8 @@
     </div>
   </section>
 
-
-
-
   <section class="main">
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
   </section>
 </template>
 
@@ -128,7 +111,7 @@ export default {
 .img-body{
   width: 100%;
   height: 500px;
-  animation: mymove 4s infinite linear alternate;
+  animation: mymove 10s infinite linear alternate;
 }
 .img-body img{
   width: 100%;

@@ -22,8 +22,8 @@ const router = createRouter({
       meta: { layout: 'DefaultLayout' },
     },
     {
-      path: '/veg',
-      name: 'veg',
+      path: '/vegetable',
+      name: 'vegetable',
       component: () => import('../views/Vegetable.vue'),
       meta: { layout: 'DefaultLayout' },
     },
@@ -34,10 +34,11 @@ const router = createRouter({
       meta: { layout: 'DefaultLayout' },
     },
     {
-      path: '/single-view',
+      path: '/single-view/:id',
       name: 'single-view',
       component: () => import('../views/SingleView.vue'),
       meta: { layout: 'DefaultLayout' },
+      props: true,
     },
     {
       path: '/gallary',
@@ -45,17 +46,6 @@ const router = createRouter({
       component: () => import('../views/GallaryView.vue'),
       meta: { layout: 'DefaultLayout' },
     },
-
-
-
-
-
-
-
-
-
-
-
 
     //page not found /:pathMatch(.*)*
     {

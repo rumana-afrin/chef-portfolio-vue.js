@@ -42,18 +42,18 @@
                   </li>
 
                   <li class="page">
-                    <router-link class="dropdown-item greenLine" to="#">Vegetable Recepies</router-link>
-                    <router-link class="nav-link page-linking" to="/veg"></router-link>
+                    <router-link class="dropdown-item greenLine" to="#">Vegetable</router-link>
+                    <router-link class="nav-link page-linking" :to="{ name:'vegetable', query:{category: 'Vegetable'}}"></router-link>
 
                   </li>
 
                   <li class="page">
-                    <router-link class="dropdown-item greenLine" to="#">Non-Veg Recepies</router-link>
+                    <router-link class="dropdown-item greenLine" to="#">Non-Veg</router-link>
                     <router-link class="nav-link page-linking bg-info" to="/nonvag"></router-link>
 
                   </li>
                   <li class="page">
-                    <router-link class="dropdown-item greenLine" to="#">Baking Recipes</router-link>
+                    <router-link class="dropdown-item greenLine" to="#">Baking</router-link>
                     <router-link class="nav-link page-linking bg-info" to="recipes.html"></router-link>
 
                   </li>
@@ -146,7 +146,8 @@
                 <router-link to="#" class="nav-link greenLine nav-menu" aria-disabled="true">Contact</router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/gallary" class="nav-link greenLine nav-menu" aria-disabled="true">Gallery</router-link>
+                <router-link to="/gallary" class="nav-link greenLine nav-menu"
+                  aria-disabled="true">Gallery</router-link>
               </li>
               <li class="nav-item">
                 <router-link to="#" class="nav-link greenLine nav-menu" aria-disabled="true">Restaurent</router-link>
@@ -155,14 +156,31 @@
             </ul>
             <ul class="main-right-nav navbar-nav me-auto mb-2 mb-lg-0 ms-lg-5 me-lg-0">
               <li class="nav-item d-flex justify-content-start">
-                <router-link to="#" class="nav-link greenLine social-link" aria-disabled="true"><i
-                    class="fa-brands fa-facebook"></i></router-link>
-                <router-link to="#" class="nav-link greenLine social-link" aria-disabled="true"><i
-                    class="fa-brands fa-pinterest"></i></router-link>
-                <router-link to="#" class="nav-link greenLine social-link" aria-disabled="true"><i
-                    class="fa-brands fa-linkedin"></i></router-link>
-                <router-link to="#" class="nav-link greenLine social-link" aria-disabled="true"><i
-                    class="fa-brands fa-youtube"></i></router-link>
+                <!-- <router-link v-if="personal_info.length > 0" to="{{ personal_info[0].linkedin }}" class="nav-link greenLine social-link" aria-disabled="true"><i
+                    class="fa-brands fa-facebook"></i></router-link> -->
+                <a v-if="personal_info.length > 0" :href="personal_info[0].facebook"
+                  class="nav-link greenLine social-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a v-if="personal_info.length > 0" :href="personal_info[0].pinterest"
+                  class="nav-link greenLine social-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-pinterest"></i>
+                </a>
+                <a v-if="personal_info.length > 0" :href="personal_info[0].linkedin"
+                  class="nav-link greenLine social-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a v-if="personal_info.length > 0" :href="personal_info[0].youtube"
+                  class="nav-link greenLine social-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <!-- <router-link to="#" class="nav-link greenLine social-link" aria-disabled="true"><i
+                    class="fa-brands fa-pinterest"></i></router-link> -->
+                <!-- <router-link to="#" class="nav-link greenLine social-link" aria-disabled="true"><i
+                    class="fa-brands fa-linkedin"></i></router-link> -->
+                <!-- <router-link to="#" class="nav-link greenLine social-link" aria-disabled="true"><i
+                    class="fa-brands fa-youtube"></i></router-link> -->
               </li>
             </ul>
           </div>
@@ -176,9 +194,20 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
   name: 'Header',
-  mounted() {
+
+  data() {
+    return {
+      personal_info: [],
+    }
+
+  },
+  async mounted() {
+
+    const pesonal_info = await axios.get("http://127.0.0.1:8000/api/personal-info");
+    this.personal_info = pesonal_info.data;
     // Listening to route changes
     this.$router.afterEach((to, from) => {
       document.querySelector('.collapse')?.classList.remove('show');
@@ -187,7 +216,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+
+</style>
 
 
 <!-- "?" holo  optional chaining operator.
